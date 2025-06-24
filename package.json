@@ -10,10 +10,13 @@
   "author": "Jordan Guevara",
   "license": "ISC",
   "dependencies": {
+    "lit": "^3.3.0",
     "lit-element": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
     "babel-loader": "^10.0.0",
     "webpack": "^5.99.9",
