@@ -1,0 +1,19 @@
+{
+  "name": "dom-local",
+  "version": "1.0.0",
+  "description": "Comportamientos de un Componente",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan Guevara",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^4.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
