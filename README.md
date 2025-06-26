@@ -8,6 +8,8 @@
 
 Incluye soporte para estados reactivos, animaciones suaves, accesibilidad y comunicación entre componentes mediante eventos personalizados.
 
+## Funciones dentro del Componente
+
 
 
 
