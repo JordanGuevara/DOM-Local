@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prueba espe-theme-toggle</title>
+  <script type="module" src="/build/espe-components.esm.js"></script>
+  <script nomodule src="/build/espe-components.js"></script>
 
-    <script type="module" src="/build/espe-components.esm.js"></script>
-    <script nomodule src="/build/espe-components.js"></script>
-  </head>
-  <body>
-    <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
-  </body>
+  <style>
+    body {
+      margin: 2rem;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <espe-theme-toggle initial-theme="light"></espe-theme-toggle>
+
+</body>
 </html>

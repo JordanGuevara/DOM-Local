@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface EspeThemeToggle {
+        /**
+          * @default 'light'
+         */
+        "initialTheme": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +28,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLEspeThemeToggleElement extends Components.EspeThemeToggle, HTMLStencilElement {
+    }
+    var HTMLEspeThemeToggleElement: {
+        prototype: HTMLEspeThemeToggleElement;
+        new (): HTMLEspeThemeToggleElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +41,17 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "espe-theme-toggle": HTMLEspeThemeToggleElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface EspeThemeToggle {
+        /**
+          * @default 'light'
+         */
+        "initialTheme"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +67,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "espe-theme-toggle": EspeThemeToggle;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +75,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "espe-theme-toggle": LocalJSX.EspeThemeToggle & JSXBase.HTMLAttributes<HTMLEspeThemeToggleElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
