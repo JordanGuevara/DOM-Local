@@ -27,23 +27,8 @@ export namespace Components {
         "middle": string;
     }
 }
-export interface EspeThemeToggleCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLEspeThemeToggleElement;
-}
 declare global {
-    interface HTMLEspeThemeToggleElementEventMap {
-        "themeChanged": string;
-    }
     interface HTMLEspeThemeToggleElement extends Components.EspeThemeToggle, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLEspeThemeToggleElementEventMap>(type: K, listener: (this: HTMLEspeThemeToggleElement, ev: EspeThemeToggleCustomEvent<HTMLEspeThemeToggleElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLEspeThemeToggleElementEventMap>(type: K, listener: (this: HTMLEspeThemeToggleElement, ev: EspeThemeToggleCustomEvent<HTMLEspeThemeToggleElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLEspeThemeToggleElement: {
         prototype: HTMLEspeThemeToggleElement;
@@ -66,7 +51,6 @@ declare namespace LocalJSX {
           * @default 'light'
          */
         "initialTheme"?: string;
-        "onThemeChanged"?: (event: EspeThemeToggleCustomEvent<string>) => void;
     }
     interface MyComponent {
         /**

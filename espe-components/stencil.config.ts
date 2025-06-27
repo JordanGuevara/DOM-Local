@@ -1,16 +1,18 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'espe-components',
-  globalStyle: 'src/global/global.css',
+  namespace: 'my-component',
   outputTargets: [
     {
       type: 'dist',
       esmLoaderPath: '../loader',
     },
     {
-      type: 'www',
-      serviceWorker: null,
+      type: 'docs-readme',
+    },
+    {
+      type: 'www', 
+      serviceWorker: null, 
     },
   ],
 };
